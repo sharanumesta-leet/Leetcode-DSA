@@ -1,0 +1,11 @@
+function check(nums: number[]): boolean {
+    let n: number = nums.length;
+    let count: number = 0;
+
+    for (let i = 0; i < n; i++) {
+        if (nums[i] > nums[(i + 1) % n])
+            count++;
+        if (count > 1) return false;
+    }
+    return true;
+};
